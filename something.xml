@@ -7,10 +7,10 @@
     <state>FL</state>
     <zip_code>11234</zip_code>
   </Address>
-  <title>Edu was here</title>
   <Address type="postal">
     <line1>3535 Head Office</line1>
     <city>Jacksonville</city>
+    <title>Edu was here</title>
     <state>FL</state>
     <zip_code>11234</zip_code>
   </Address>

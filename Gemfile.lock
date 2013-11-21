@@ -1,10 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    rake (10.1.0)
     xml-simple (1.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  rake
   xml-simple

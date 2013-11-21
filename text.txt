@@ -6,6 +6,4 @@ last_name
 Joe
 Address
 {"type"=>"home", "line1"=>["211 Over There"], "city"=>["Jacksonville"], "state"=>["FL"], "zip_code"=>["11234"]}
-{"type"=>"postal", "line1"=>["3535 Head Office"], "city"=>["Jacksonville"], "state"=>["FL"], "zip_code"=>["11234"]}
-title
-Edu was here
+{"type"=>"postal", "line1"=>["3535 Head Office"], "city"=>["Jacksonville"], "title"=>["Edu was here"], "state"=>["FL"], "zip_code"=>["11234"]}
