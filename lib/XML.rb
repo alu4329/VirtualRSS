@@ -1,8 +1,8 @@
 require 'xmlsimple'
-
+require 'pp'
 
   config = XmlSimple.xml_in('something.xml')
-  
+  pp config
   puts config['Address'][1]['title']
   #config['Address'].select{ |k,v| k.start_with? ''}
   #puts config.find_all { |key, value| key.start_with? ''}
