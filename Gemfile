@@ -1,9 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'xml-simple'
+gem 'haml'
+gem "sass", :require => 'sass'
+gem 'thin'
+gem "dm-core"
+gem "heroku"
+gem "dm-migrations"
+gem "dm-postgres-adapter", :group => :production
+gem "dm-sqlite-adapter", :group => :development
 gem 'nokogiri'
 gem 'sinatra'
 gem 'bitly'
-gem 'omniauth-bitly', :git => 'https://github.com/michaeldelorenzo/omniauth-bitly.git'
 gem 'ruby-bitly'
 
