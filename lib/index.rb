@@ -11,16 +11,25 @@ require 'ruby-bitly'
 require 'haml'
 require './lib/noko.rb'
 
-
 class User
   include DataMapper::Resource
+  
   property :id,       Serial
   property :username, String
   property :password, String
   property :foto,     String
-  property :rss,      Text
+  has n,   :rsss
 end
 
-
+class Rss
+  include DataMapper::Resource
+  
+  property :id,	      	Serial
+  property :short_link,	String
+  
+  belongs_to :user
+  
+end
 
 DataMapper.finalize
+
