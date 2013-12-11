@@ -1,6 +1,6 @@
 desc "run server"
 task :default do
-  sh "ruby lib/visualrss.rb"
+  sh "rackup"
 end
 
 desc "install dependencies"
