@@ -21,5 +21,4 @@
               .form-group
                 %input.form-control{placeholder: "Password", type: "password", :name=>"user[password]"}
               %button.btn.btn-success{type: "submit"} Sign in
-            %li
-              %a{:href => "/sign_up"}Registrarse
+              %button.btn.btn-info{onclick: "location.href='/sign_up'"} Registrarse
