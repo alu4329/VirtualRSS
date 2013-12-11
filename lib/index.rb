@@ -18,7 +18,7 @@ class User
   property :username, String
   property :password, String
   property :foto,     String
-  property :rss,      Array
+  property :rss,      Text
 end
 
 

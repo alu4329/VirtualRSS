@@ -62,7 +62,7 @@ post '/sign_up' do
     redirect to("/user/#{user.id}")
   end
 end
-=begin
+
 
 put 'user/:id' do
   user = User.get(params[:id])
@@ -70,6 +70,7 @@ put 'user/:id' do
   redirect to("/user/#{user.id}")
 end
 
+=begin
 delete '/user/:id' do
    User.get(params[:id]).destroy
    redirect to('/user')
