@@ -7,8 +7,7 @@
         %a{:href => "users/#{User.first(:username => "#{session[:user]}").id}"}
           = session[:user]
       %li
-        %a{:href => "/"}Desconectar
-        #Falta limpiar la sesion.
+        %a{:href => "/logout"}Desconectar
     - else
       %li
         %a{:href => "/sign_up"}Registrarse

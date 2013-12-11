@@ -34,6 +34,7 @@ get '/user/:id/perfil' do
   #slim :perfil
 end
 
+
 =begin
 post '/' do
   if (params[:user][:username].empty?) || (params[:user][:password].empty?)
@@ -59,10 +60,17 @@ post '/sign_up' do
     #flash[:success] = "User created successfully"
     #flash[:login] = "Login successfully"
     session["user"] = "#{params[:user][:username]}"
-    redirect to("/user/#{user.id}")
+    redirect to("/")
   end
 end
 
+get '/logout' do
+  "Hello World"
+  user = User.get(params[:id])
+  session["user"] = nil
+  session.clear
+  redirect to ("/")
+end
 
 put 'user/:id' do
   user = User.get(params[:id])
