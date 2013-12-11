@@ -1,4 +1,6 @@
 .body
-  %p Aqui va el body
-  %p ASDSADSDASDDSADDSASAD
-  %p ASDSADASD
+  - if session[:user]
+    - @output = show_rss(User.first(:username => "#{session[:user]}").rss)
+    - for i in 0.. @output.length
+      %a{href:"#{@output[:link][i]}"} #{@output[:title][i]}
+      %br

@@ -19,6 +19,11 @@ class User
   property :password, String
   property :foto,     String
   property :rss,      String
+  
+  
+  #def rss= new_rss
+    #@rss = Bitly.shorten(new_rss, "o_1qfb1am5b6", "R_770c5cbd981cadac42359a65fed206df")
+  #end
 end
 
 
