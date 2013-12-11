@@ -24,7 +24,7 @@ end
 class Rss
   include DataMapper::Resource
   
-  property :id,	      	Serial
+  property :id,		String, key: true, unique_index: true
   property :short_link,	String
   
   belongs_to :user

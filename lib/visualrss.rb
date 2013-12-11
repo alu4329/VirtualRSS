@@ -37,19 +37,19 @@ end
 
 
 post '/' do
+=begin
   @totalidad = User.all
   @totalidad.each do |user|
     "#{user.username}"
   end
-=begin
+=end
   if (params[:user][:username].empty?) || (params[:user][:password].empty?)
-    #redirect to ('/')
+    redirect to ('/')
   else
     session["user"] = "#{params[:user][:username]}" 
     @user = User.get(params[:id])
-    #redirect to("/")
+    redirect to("/")
   end
-=end
 end
 
 
