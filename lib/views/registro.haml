@@ -1,1 +1,16 @@
-
+.registro
+  %h1 Registrarse
+  %form{:name => "registro", :method => "POST", :action => "/sign_up"}
+    Username:
+    %input{:type => "text", :name => "user[username]"}
+    %br
+    Password:
+    %input{:type => "password", :name => "user[password]"}
+    %br
+    Link a la rss:
+    %input{:type => "text", :name => "user[rss]"}
+    %br
+    Foto para el perfíl de usuario:
+    %input{:type => "text", :name => "user[foto]"}
+    %br
+    %input{:type => "submit", :value => "Confirmar registro"}

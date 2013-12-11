@@ -1,0 +1,16 @@
+%cabecera
+  %ul
+    %li
+      %a{:href => "/"}Home   
+    - if session[:user]
+      %li.active
+        %a{:href => "users/#{User.first(:username => "#{session[:user]}").id}"}
+          = session[:user]
+      %li
+        %a{:href => "/"}Desconectar
+        #Falta limpiar la sesion.
+    - else
+      %li
+        %a{:href => "/sign_up"}Registrarse
+      %li
+        %a{:href => "/"}Conectarse

@@ -1,1 +1,10 @@
-%h1 Edu was here
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title VisualRSS
+    %link{:rel=>"stylesheet", :href=>"/styles.css", :type=>"text/css"} 
+  %body
+    %header
+      = haml :cabecera
+    %footer
+      = haml :pie
