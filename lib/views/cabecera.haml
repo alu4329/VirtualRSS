@@ -1,17 +1,25 @@
 %cabecera
-  %ul
-    %li
-      %a{:href => "/"}Home   
-    - if session[:user]
-      %li.active
-        %a{:href => "users/#{User.first(:username => "#{session[:user]}").id}"}
-          = session[:user]
-      %li
-        %a{:href => "/logout"}Desconectar
-    - else
-      %form{:action=>"/",:method=>"POST"}  
-        %input{:type=>"text",:name=>"user[username]",:placeholder=>"Usuario"}
-        %input{:type=>"password",:name=>"user[password]",:placeholder=>"Contraseña"}
-        %input{:type=>"submit",:value=>"Conectarse"}
-      %li
-        %a{:href => "/sign_up"}Registrarse
+  .navbar.navbar-inverse.navbar-fixed-top{role: "navigation"}
+    .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}%a.navbar-brand{href: "#"} Project name
+      .navbar-collapse.collapse
+        %form.navbar-form.navbar-right{role: "form"}
+          - if session[:user]
+            %li.active
+              %a{:href => "users/#{User.first(:username => "#{session[:user]}").id}"}
+                = session[:user]
+            %li
+              %a{:href => "/logout"}Desconectar
+              %ul
+                %li
+                  %a{:href => "/"}Home              
+          - else
+            %form{:action=>"/",:method=>"POST"}  
+              .form-group
+                %input.form-control{placeholder: "User", type: "text", :name=>"user[username]"}
+              .form-group
+                %input.form-control{placeholder: "Password", type: "password", :name=>"user[password]"}
+              %button.btn.btn-success{type: "submit"} Sign in
+            %li
+              %a{:href => "/sign_up"}Registrarse
