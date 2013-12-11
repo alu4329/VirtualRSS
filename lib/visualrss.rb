@@ -65,7 +65,6 @@ post '/sign_up' do
 end
 
 get '/logout' do
-  "Hello World"
   user = User.get(params[:id])
   session["user"] = nil
   session.clear
