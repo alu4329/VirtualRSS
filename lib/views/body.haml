@@ -2,6 +2,6 @@
   %h1 Aqui va el body
 
   - if session[:user]
-    %p #{User.first(:username => "#{session[:user]}").rss}
     - @output = show_rss(User.first(:username => "#{session[:user]}").rss)
-    %p #{@output}
+    - for i in 0.. @output.length
+      %p #{@output[i]}
