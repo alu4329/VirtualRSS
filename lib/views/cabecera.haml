@@ -15,10 +15,13 @@
                 %li
                   %a{:href => "/"}Home              
           - else
-            %form{:action=>"/",:method=>"POST"}  
-              .form-group
-                %input.form-control{placeholder: "User", type: "text", :name=>"user[username]"}
-              .form-group
-                %input.form-control{placeholder: "Password", type: "password", :name=>"user[password]"}
-              %button.btn.btn-success{type: "submit"} Sign in
-              %button.btn.btn-info{onclick: "location.href='/sign_up'"} Registrarse
+            .form-group
+              %form{:action=>"/",:method=>"POST"}  
+                .form-group
+                  %input.form-control{placeholder: "User", type: "text", :name=>"user[username]"}
+                .form-group
+                  %input.form-control{placeholder: "Password", type: "password", :name=>"user[password]"}
+                %button.btn.btn-success{type: "submit"} Sign in
+            %a.navbar-brand{href: "/sign_up"} &nbsp &nbsp &nbsp Sign Up
+            
+              
