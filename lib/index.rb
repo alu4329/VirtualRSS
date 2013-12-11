@@ -18,18 +18,10 @@ class User
   property :username, String
   property :password, String
   property :foto,     String
-  has n,   :rsss
+  property :rss,      String
 end
 
-class Rss
-  include DataMapper::Resource
-  
-  property :id,		String, key: true, unique_index: true
-  property :short_link,	String
-  
-  belongs_to :user
-  
-end
+
 
 DataMapper.finalize
 
