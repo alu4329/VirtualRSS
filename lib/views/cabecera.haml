@@ -9,7 +9,9 @@
       %li
         %a{:href => "/logout"}Desconectar
     - else
+      %form{:action=>"/",:method=>"POST"}  
+        %input{:type=>"text",:name=>"user[username]",:placeholder=>"Usuario"}
+        %input{:type=>"password",:name=>"user[password]",:placeholder=>"Contraseña"}
+        %input{:type=>"submit",:value=>"Conectarse"}
       %li
         %a{:href => "/sign_up"}Registrarse
-      %li
-        %a{:href => "/"}Conectarse

@@ -35,18 +35,23 @@ get '/user/:id/perfil' do
 end
 
 
-=begin
+
 post '/' do
-  if (params[:user][:username].empty?) || (params[:user][:password].empty?)
-    #flash[:error] = 
-    "Error: Usuario o contraseña incorrectas"
-    redirect to ('/')
-  else
-    @user = User.get(params[:id])
-    redirect to("/user/#{user.id}")
+  @totalidad = User.all
+  @totalidad.each do |user|
+    "#{user.username}"
   end
-end
+=begin
+  if (params[:user][:username].empty?) || (params[:user][:password].empty?)
+    #redirect to ('/')
+  else
+    session["user"] = "#{params[:user][:username]}" 
+    @user = User.get(params[:id])
+    #redirect to("/")
+  end
 =end
+end
+
 
 post '/sign_up' do
   if (params[:user][:username].empty?) || (params[:user][:password].empty?)
