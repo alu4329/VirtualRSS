@@ -1,10 +1,5 @@
 require './lib/index.rb'
 
-
-
-
-
-
 settings.port = ENV['PORT'] || 4567
 use Rack::Session::Pool, :expire_after => 2592000
 set :session_secret, 'super secret'
