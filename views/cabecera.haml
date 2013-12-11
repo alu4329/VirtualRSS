@@ -1,0 +1,17 @@
+%cabecera
+  %ul
+    %li
+      %a{:href => "/"}Home   
+    - if session[:user]
+      %li.active
+        %a{:href => "users/#{User.first(:username => "#{session[:user]}").id}"}
+          = session[:user]
+      %li
+        %a{:href => "/logout"}Desconectar
+    - else
+      %form{:action=>"/",:method=>"POST"}  
+        %input{:type=>"text",:name=>"user[username]",:placeholder=>"Usuario"}
+        %input{:type=>"password",:name=>"user[password]",:placeholder=>"Contraseña"}
+        %input{:type=>"submit",:value=>"Conectarse"}
+      %li
+        %a{:href => "/sign_up"}Registrarse

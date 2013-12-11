@@ -1,2 +1,2 @@
-require './lib/visualrss.rb'
+require './visualrss.rb'
 run Sinatra::Application
