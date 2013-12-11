@@ -23,13 +23,10 @@ get '/user/:id' do |id|
   #haml :usuario
 end
 
-
 get '/user/:id/perfil' do
   @user = User.get(params[:id])
   #slim :perfil
 end
-
-
 
 post '/' do
 =begin
