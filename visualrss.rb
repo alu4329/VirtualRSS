@@ -77,6 +77,8 @@ put 'user/:id' do
   redirect to("/user/#{user.id}")
 end
 
+use Rack::Static, :urls => ["/public"]
+
 =begin
 delete '/user/:id' do
    User.get(params[:id]).destroy
