@@ -12,7 +12,7 @@ def show_rss doc
       #@doc.search('description').children[i].text = 
       @resultado[:title].push(truncate(@doc.search('description').children[i].text))
       #Limpiar el link para limpiar el <![CDATA[ ]]>
-      @resultado[:link].push(@doc.search('link').children[i])
+      @resultado[:link].push(@doc.search('link').children[i].text)
     #puts Bitly.shorten(@doc.search('link').children[i], "o_1qfb1am5b6", "R_770c5cbd981cadac42359a65fed206df").url
       #puts (@doc.search('link').children[i])
     end
