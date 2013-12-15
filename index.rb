@@ -14,16 +14,19 @@ require './noko.rb'
 class User
   include DataMapper::Resource
   
-  property :id,       Serial
-  property :username, String
-  property :password, String
-  property :foto,     String
-  property :rss,      String
+  property :id,       	Serial
+  property :username, 	String
+  property :password, 	String
+  property :foto,     	String
+  property :rss,      	String
+  property :titulo_rss,	String
   
-  
+=begin Acortar link
   #def rss= new_rss
     #@rss = Bitly.shorten(new_rss, "o_1qfb1am5b6", "R_770c5cbd981cadac42359a65fed206df")
   #end
+  */
+=end
 end
 
 
