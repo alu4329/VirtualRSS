@@ -9,3 +9,21 @@
 .cabecera {
   margin-bottom: 5em;
 }
+
+.desplegable {
+  margin-top: 1.25em;
+  margin-left: 63em;
+}
+
+button{
+  min-width:11.2em;
+}
+
+input{
+  min-height:2em;
+}
+
+fieldset{
+  margin-top: 6em;
+  text-align: center;
+}

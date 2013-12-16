@@ -14,6 +14,10 @@ get '/sign_up' do
   haml :registro
 end
 
+get '/new_rss' do
+  haml :new_rss
+end
+
 get '/index' do
   haml :index
 end

@@ -6,15 +6,30 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{href: "/"} Inicio
-      %a.navbar-brand{href: "/sign_up"} Sign Up
+      %a.navbar-brand{href: "/"} Inicio &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     - if session[:user]
-      %li.active
-        %a{:href => "users/#{User.first(:username => "#{session[:user]}").id}"}
+      .btn-group
+        %button.btn.btn-warning.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+          RSS asociadas
+          %span.caret
+        %ul.dropdown-menu{role: "menu"}
+          - @output = User.first(:username => "#{session[:user]}").titulo_rss
+          %li "#{@output}"
+          %li.divider
+          %li
+            %a{href: "/new_rss"} Añadir nueva RSS
+      .btn-group.pull-right
+        %button#dropdownMenu1.btn.btn-success.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
           = session[:user]
-      %li
-        %a{:href => "/logout"}Desconectar
+          %span.caret
+        %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1", role: "menu"}
+          %li{role: "presentation"}
+            %a{href: "#", role: "menuitem", tabindex: "-1"} Perfil
+          %li.divider{role: "presentation"}
+          %li{role: "presentation"}
+            %a{href: "/logout", role: "menuitem", tabindex: "-1"} Cerrar sesion         
     - else
+      %a.navbar-brand{href: "/sign_up"} Registro &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       %form.navbar-form.navbar-right{:action=>"/",:method=>"POST", role: "form"}
         .form-group
           %input.form-control{placeholder: "Usuario", type: "text", :name=>"user[username]"}/
