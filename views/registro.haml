@@ -1,29 +1,29 @@
 = haml :comun
 = haml :cabecera
 
-%form.form-horizontal{:name => "registro", :method => "POST", :action => "/sign_up"}
+%form.form-horizontal{:onsubmit => "return test()", :name => "registro", :method => "POST", :action => "/sign_up"}
   %fieldset
     %legend Registro
     .control-group
       %label.control-label{for: "textinput"} 
       .controls
-        %input#textinput.input-xlarge{placeholder: "Nombre",:type => "text", :name => "user[username]"}
+        %input#textinput.input-xlarge{placeholder: "Nombre",:type => "text", :name => "user[username]", :id => "nombre"}
     .control-group
       %label.control-label{for: "passwordinput"}
       .controls
-        %input#passwordinput.input-xlarge{placeholder: "Contraseña",:type => "password", :name => "user[password]"}
+        %input#passwordinput.input-xlarge{placeholder: "Contraseña",:type => "password", :name => "user[password]", :id => "password"}
     .control-group
       %label.control-label{for: "textinput"}
       .controls
-        %input#passwordinput.input-xlarge{placeholder: "Link a la RSS",:type => "text", :name => "user[rss]"}
+        %input#passwordinput.input-xlarge{placeholder: "Link a la RSS",:type => "text", :name => "user[rss]", :id => "rss"}
     .control-group
       %label.control-label{for: "textinput"}
       .controls
-        %input#passwordinput.input-xlarge{placeholder: "Titulo de la RSS",:type => "text", :name => "user[titulo_rss]"}
+        %input#passwordinput.input-xlarge{placeholder: "Titulo de la RSS",:type => "text", :name => "user[titulo_rss]", :id => "titulo"}
     .control-group
       %label.control-label{for: "textinput"}
       .controls
-        %input#passwordinput.input-xlarge{placeholder: "Link a la foto de perfil",:type => "text", :name => "user[foto]"}
+        %input#passwordinput.input-xlarge{placeholder: "Link a la foto de perfil",:type => "text", :name => "user[foto]", :id => "foto"}
     .control-group
       %label.control-label{for: "checkboxes"}
       .controls
