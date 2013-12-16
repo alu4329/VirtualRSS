@@ -1,9 +1,16 @@
 .body{
-  background-color:#47D1FF;
+  background-color:#F5F5F5;
+  min-height:40em;
+  margin-top:3.5em;
+  margin-left:5em;
+  margin-right:5em;
 }
 
 .footer{
-  background-color:green;
+  border-color:black;
+  text-align:right;
+  margin-left:5em;
+  margin-right:5em;
 }
 
 .cabecera {
@@ -26,4 +33,40 @@ input{
 fieldset{
   margin-top: 6em;
   text-align: center;
+}
+
+img{
+  margin-top: 0.4em;
+  height:3em;
+  width: 10em;
+}
+
+.registro{
+  margin-left: 15em;
+  font-weight: bold;
+}
+
+.rss_asociada{
+    margin-left: 23em;
+}
+
+ul.dropdown-menu{
+    margin-left:23em;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top{
+  background-color:#E0E0E0;
+  border:0px;
+  margin-left:5em;
+  margin-right:5em;
+}
+
+form.form-horizontal{
+  margin-left: -13em;
+  text-align:center;
+  margin-top: 3em;
+}
+
+.footer.p{
+  font-size:2em;
 }

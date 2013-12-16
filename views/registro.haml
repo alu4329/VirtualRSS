@@ -1,9 +1,11 @@
 = haml :comun
 = haml :cabecera
 
-%form.form-horizontal{:onsubmit => "return test()", :name => "registro", :method => "POST", :action => "/sign_up"}
-  %fieldset
-    %legend Registro
+.body
+  %br
+  %form.form-horizontal{:onsubmit => "return test()", :name => "registro", :method => "POST", :action => "/sign_up"}
+    %h2 Registro
+    %br
     .control-group
       %label.control-label{for: "textinput"} 
       .controls
@@ -35,6 +37,5 @@
       %label.control-label{for: "singlebutton"}
       .controls
         %button#singlebutton.btn.btn-primary{name: "singlebutton"} Enviar
-
 = haml :pie
 

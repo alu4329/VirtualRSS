@@ -6,18 +6,20 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{href: "/"} Inicio &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      %a{href: "/"}
+        %img{src: "images/Logo.png"}
     - if session[:user]
       .btn-group
-        %button.btn.btn-warning.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
-          RSS asociadas
-          %span.caret
-        %ul.dropdown-menu{role: "menu"}
-          - @output = User.first(:username => "#{session[:user]}").titulo_rss
-          %li "#{@output}"
-          %li.divider
-          %li
-            %a{href: "/new_rss"} Añadir nueva RSS
+        .rss_asociada
+          %button.btn.btn-warning.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
+            RSS asociadas
+            %span.caret
+          %ul.dropdown-menu{role: "menu"}
+            - @output = User.first(:username => "#{session[:user]}").titulo_rss
+            %li "#{@output}"
+            %li.divider
+            %li
+              %a{href: "/new_rss"} Añadir nueva RSS
       .btn-group.pull-right
         %button#dropdownMenu1.btn.btn-success.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
           = session[:user]
@@ -29,11 +31,12 @@
           %li{role: "presentation"}
             %a{href: "/logout", role: "menuitem", tabindex: "-1"} Cerrar sesion         
     - else
-      %a.navbar-brand{href: "/sign_up"} Registro &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      %form.navbar-form.navbar-right{:action=>"/",:method=>"POST", role: "form"}
-        .form-group
-          %input.form-control{placeholder: "Usuario", type: "text", :name=>"user[username]"}/
-        .form-group
-          %input.form-control{placeholder: "Password", type: "password", :name=>"user[password]"}/
-        %button.btn.btn-success{type: "submit"} Sign in
-    / /.navbar-collapse
+      .registro
+        %a.navbar-brand{href: "/sign_up"} Registro &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        %form.navbar-form.navbar-right{:action=>"/",:method=>"POST", role: "form"}
+          .form-group
+            %input.form-control{placeholder: "Usuario", type: "text", :name=>"user[username]"}/
+          .form-group
+            %input.form-control{placeholder: "Password", type: "password", :name=>"user[password]"}/
+          %button.btn.btn-success{type: "submit"} Sign in
+      / /.navbar-collapse
