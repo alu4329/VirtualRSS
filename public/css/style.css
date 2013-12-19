@@ -65,8 +65,25 @@ form.form-horizontal{
   margin-left: -13em;
   text-align:center;
   margin-top: 3em;
+  min-height:38em;
 }
 
 .footer.p{
   font-size:2em;
+}
+
+.perfil{
+  background-color:#F5F5F5;
+  min-height:40em;
+  margin-top:3.5em;
+  margin-left:5em;
+  margin-right:5em;
+}
+
+.body_show{
+  background-color:#F5F5F5;
+  min-height:40em;
+  margin-top:3.5em;
+  margin-left:7em;
+  margin-right:5em;
 }

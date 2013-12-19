@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'haml'
+gem "sinatra-flash"
 gem "sass", :require => 'sass'
 gem 'thin'
 gem "dm-core"

@@ -1,7 +1,13 @@
 .body
-  %h1 HOLA soy cuerpo
-  - if session[:user]
-    - @output = show_rss(User.first(:username => "#{session[:user]}").rss)
-    - for i in 0.. @output.length
-      %a{href:"#{@output[:link][i]}"} #{@output[:title][i]}
-      %br
+  .body_show
+    %br
+    %br
+    %br
+    %br
+    - if session[:user]
+      - @output = show_rss(User.first(:username => "#{session[:user]}").rss)
+      %h1 #{User.first(:username => "#{session[:user]}").titulo_rss}
+      - for i in 0.. @output.length
+        %hr
+        %a{href:"#{@output[:link][i]}"} #{@output[:title][i]}
+        %br
