@@ -1,5 +1,4 @@
 #require './lib/visualrss.rb'
-#require 'sinatra/flash'
 require 'dm-core'
 require 'dm-migrations'
 require 'sinatra'
@@ -22,8 +21,9 @@ class User
   property :rss,      		String
   property :titulo_rss,		String
   
-end
+
 #  has n, :rsss
+end
   
 =begin Acortar link
   #def rss= new_rss
