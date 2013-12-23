@@ -17,7 +17,7 @@ function test() {
   
   if (valora == null || valora.length <= 5 || /^\s+$/.test(valora)) {
     var parrafo0 = document.createElement("p");
-    var contenido = document.createTextNode("El nombre es obligatorio, y debe contener al menos 6 dígitos");
+    var contenido = document.createTextNode("Nombre obligatorio con al menos 6 dígitos");
     parrafo0.appendChild(contenido);
     document.getElementById("error").appendChild(parrafo0);
     parrafo0.setAttribute('id',0);
@@ -26,7 +26,7 @@ function test() {
   
   if (valorb == null || valorb.length <= 5 || /^\s+$/.test(valorb)) {
     var parrafo1 = document.createElement("p");
-    var contenido = document.createTextNode("La password es obligatoria y debe contener al menos 6 dígitos");
+    var contenido = document.createTextNode("Password obligatoria con al menos 6 dígitos");
     parrafo1.appendChild(contenido);
     document.getElementById("error").appendChild(parrafo1);
     parrafo1.setAttribute('id',1);
@@ -68,7 +68,7 @@ function test() {
     parrafo5.setAttribute('id',5);
     fail = 0;
   }
-  if (fail == 1) {
+  if (fail) {
     return true;
   } else {
     return false;
