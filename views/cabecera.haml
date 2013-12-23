@@ -21,7 +21,7 @@
             - p @titulos
             - for i in 0..@titulos.length-1
               %li
-                %button{onclick:"cambiar(#{i})"} #{@titulos[i]}
+                %a{href: '/', onclick:"cambiar(#{i})"} #{@titulos[i]}
             %hr
             %li
               %a{href: "/new_rss"} Añadir nueva RSS
