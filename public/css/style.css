@@ -87,3 +87,8 @@ form.form-horizontal{
   margin-left:7em;
   margin-right:5em;
 }
+
+
+.error {
+  color: red;
+}

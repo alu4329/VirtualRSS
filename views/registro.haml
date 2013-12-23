@@ -6,7 +6,7 @@
   .center
     %form.form-horizontal{:onsubmit => "return test()", :name => "registro", :method => "POST", :action => "/sign_up"}
       %h2 Registro
-      %br
+      %div{:id=>"error"}
       .control-group
         %label.control-label{for: "textinput"} 
         .controls
