@@ -15,9 +15,14 @@
             RSS asociadas
             %span.caret
           %ul.dropdown-menu{role: "menu"}
-            - @output = User.first(:username => "#{session[:user]}").titulo_rss
-            %li "#{@output}"
-            %li.divider
+            - @titulos = User.first(:username => "#{session[:user]}").titulo_rss
+            - @titulos = @titulos.split("### ")
+            - puts @titulos
+            - p @titulos
+            - for i in 0..@titulos.length
+              %li 
+                %a{href: "/"} #{@titulos[i]}
+            %hr
             %li
               %a{href: "/new_rss"} Añadir nueva RSS
       .btn-group.pull-right
@@ -27,9 +32,9 @@
         %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1", role: "menu"}
           %li{role: "presentation"}
             %a{href: "/perfil", role: "menuitem", tabindex: "-1"} Perfil
-          %li.divider{role: "presentation"}
           %li{role: "presentation"}
-            %a{href: "/logout", role: "menuitem", tabindex: "-1"} Cerrar sesion         
+            %hr
+              %a{href: "/logout", role: "menuitem", tabindex: "-1"} Cerrar sesion         
     - else
       .registro
         %a.navbar-brand{href: "/sign_up"} Registro &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp

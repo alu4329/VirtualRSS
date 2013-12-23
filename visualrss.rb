@@ -28,10 +28,9 @@ post '/new_rss' do
   puts rss2
   un_usuario = User.first(:username => session["user"])
   un_usuario.rss << rss2
-  un_usuario.titulo_rss << rss_title2
+  un_usuario.titulo_rss << "####{rss_title2}"
   User.first(:username => session["user"]).update(:rss => un_usuario.rss)
   User.first(:username => session["user"]).update(:titulo_rss => un_usuario.titulo_rss)
-  un_usuario.save
   redirect to ('/')
 end
 

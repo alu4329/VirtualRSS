@@ -52,6 +52,15 @@ img{
 
 ul.dropdown-menu{
     margin-left:23em;
+    text-align:center;
+}
+
+hr{
+  margin-top:0.3em;
+  margin-bottom:0.3em;
+  border-color:#7A7A7A;
+  color: #7A7A7A;
+  background-color: #7A7A7A;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top{
