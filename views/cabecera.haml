@@ -11,15 +11,17 @@
     - if session[:user]
       .btn-group
         .rss_asociada
-          %button.btn.btn-warning.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
-            RSS asociadas
-            %span.caret
-          %ul.dropdown-menu{role: "menu"}
-            - @output = User.first(:username => "#{session[:user]}").titulo_rss
-            %li "#{@output}"
-            %li.divider
-            %li
-              %a{href: "/new_rss"} Añadir nueva RSS
+          - @titulos = User.first(:username => "#{session[:user]}").titulo_rss
+          - @rsss = User.first(:username => "#{session[:user]}").rss
+          - @titulos = @titulos.split("### ")
+          - @rsss = @rsss.split(" ")
+          %select{name: "forma", onchange: "location = this.options[this.selectedIndex].value;"}
+            %option{value:"/"} Gestion de RSS
+            %optgroup{label: "RSS Asociadas"}
+              - for i in 0..@titulos.length-1
+                %option{value: "cambiar/#{i}"} #{@titulos[i]}
+            %optgroup{label: "Gestionar RSS"}
+              %option{value:"/new_rss"} Añadir nueva RSS     
       .btn-group.pull-right
         %button#dropdownMenu1.btn.btn-success.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
           = session[:user]
@@ -27,9 +29,9 @@
         %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1", role: "menu"}
           %li{role: "presentation"}
             %a{href: "/perfil", role: "menuitem", tabindex: "-1"} Perfil
-          %li.divider{role: "presentation"}
           %li{role: "presentation"}
-            %a{href: "/logout", role: "menuitem", tabindex: "-1"} Cerrar sesion         
+            %hr
+              %a{href: "/logout", role: "menuitem", tabindex: "-1"} Cerrar sesion         
     - else
       .registro
         %a.navbar-brand{href: "/sign_up"} Registro &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp

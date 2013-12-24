@@ -1,20 +1,23 @@
 = haml :comun
 = haml :cabecera
 
-%form.form-horizontal{:name => "registro", :method => "POST", :action => "/sign_up"}
-  %fieldset
-    %legend Registro
-    .control-group
-      %label.control-label{for: "textinput"}
-      .controls
-        %input#passwordinput.input-xlarge{placeholder: "Link a la RSS",:type => "text", :name => "rss_nueva"}
-    .control-group
-      %label.control-label{for: "textinput"}
-      .controls
-        %input#passwordinput.input-xlarge{placeholder: "Titulo de la RSS",:type => "text", :name => "rss_titulo_nueva"}
-    .control-group
-      %label.control-label{for: "singlebutton"}
-      .controls
-        %button#singlebutton.btn.btn-primary{name: "singlebutton"} Enviar
+- if session[:user]
+  %form.form-horizontal{:name => "registro", :method => "POST", :action => "/new_rss"}
+    %fieldset
+      %legend Registro
+      .control-group
+        %label.control-label{for: "textinput"}
+        .controls
+          %input#passwordinput.input-xlarge{placeholder: "Link a la RSS",:type => "text", :name => "user[rss]"}
+      .control-group
+        %label.control-label{for: "textinput"}
+        .controls
+          %input#passwordinput.input-xlarge{placeholder: "Titulo de la RSS",:type => "text", :name => "user[rss_titulo]"}
+      .control-group
+        %label.control-label{for: "singlebutton"}
+        .controls
+          %button#singlebutton.btn.btn-primary{name: "singlebutton"} Enviar
+- else
+  - redirect to('/sign_up')
 
 = haml :pie

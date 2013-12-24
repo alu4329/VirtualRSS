@@ -5,9 +5,9 @@
     %br
     %br
     - if session[:user]
-      - @output = show_rss(User.first(:username => "#{session[:user]}").rss)
-      %h1 #{User.first(:username => "#{session[:user]}").titulo_rss}
-      - for i in 0.. @output.length
+      -  @output = show_rss(User.first(:username => "#{session[:user]}").rss_used)
+      %h1 #{User.first(:username => "#{session[:user]}").titulo_used}
+      - for i in 0..@output.length
         %hr
         %a{href:"#{@output[:link][i]}"} #{@output[:title][i]}
-        %br
+      %hr
