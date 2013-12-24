@@ -16,12 +16,12 @@
             %span.caret
           %ul.dropdown-menu{role: "menu"}
             - @titulos = User.first(:username => "#{session[:user]}").titulo_rss
+            - @rsss = User.first(:username => "#{session[:user]}").rss
             - @titulos = @titulos.split("### ")
-            - puts @titulos
-            - p @titulos
-            - for i in 0..@titulos.length-1
+            - @rsss = @rsss.split(" ")
+            - for $next in 0..@titulos.length-1
               %li
-                %a{href: '/', onclick:"cambiar(#{i})"} #{@titulos[i]}
+                %a{href:'/cambiar'} #{@titulos[$next]}
             %hr
             %li
               %a{href: "/new_rss"} Añadir nueva RSS
