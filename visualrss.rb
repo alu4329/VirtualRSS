@@ -39,13 +39,15 @@ post '/new_rss' do
 end
 
 
-get '/cambiar' do
+get '/cambiar/:rss_used' do
   @tituloss = User.first(:username => "#{session[:user]}").titulo_rss
   @rsss = User.first(:username => "#{session[:user]}").rss
   @tituloss = @tituloss.split("### ")
   @rsss = @rsss.split(" ")
-  User.first(:username => session["user"]).update(:rss_used => @rsss[$next])
-  User.first(:username => session["user"]).update(:titulo_used => @tituloss[$next])
+  a = request.path_info
+  a = a.gsub(/\/cambiar\//,"")
+  User.first(:username => session["user"]).update(:rss_used => @rsss[a.to_i])
+  User.first(:username => session["user"]).update(:titulo_used => @tituloss[a.to_i])
   redirect to ('/')
 end
 

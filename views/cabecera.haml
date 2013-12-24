@@ -11,23 +11,17 @@
     - if session[:user]
       .btn-group
         .rss_asociada
-          %button.btn.btn-warning.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
-            RSS asociadas
-            %span.caret
-          %ul.dropdown-menu{role: "menu"}
-            - @titulos = User.first(:username => "#{session[:user]}").titulo_rss
-            - @rsss = User.first(:username => "#{session[:user]}").rss
-            - @titulos = @titulos.split("### ")
-            - @rsss = @rsss.split(" ")
-            - $next = -1
-            - p $next
-            - p $next.class
+          - @titulos = User.first(:username => "#{session[:user]}").titulo_rss
+          - @rsss = User.first(:username => "#{session[:user]}").rss
+          - @titulos = @titulos.split("### ")
+          - @rsss = @rsss.split(" ")
+          %select{name: "forma", onchange: "location = this.options[this.selectedIndex].value;"}
             - for i in 0..@titulos.length-1
-              %li
-                %a{href: '/cambiar', value:"#{i}", onclick:'cambiar(this)'} #{@titulos[i]}
-            %hr
-            %li
-              %a{href: "/new_rss"} Añadir nueva RSS
+              %option{value: "cambiar/#{i}"} #{@titulos[i]}
+            %option{value:"/new_rss"} Añadir nueva RSS
+              
+
+              
       .btn-group.pull-right
         %button#dropdownMenu1.btn.btn-success.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
           = session[:user]

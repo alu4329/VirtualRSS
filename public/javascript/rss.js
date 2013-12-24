@@ -1,9 +1,5 @@
-function cambiar(a){
+function cambiar(a,b){
   numero = a.getAttribute('value');
-  $next = numero;
-  if (a!=null) {
-    return $next;
-  } else {
-    return 0;
-  }
+  b = numero;
+  alert(b);
 }
