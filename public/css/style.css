@@ -42,7 +42,6 @@ img{
 }
 
 .registro{
-  margin-left: 15em;
   font-weight: bold;
 }
 
@@ -95,4 +94,13 @@ form.form-horizontal{
   margin-top:3.5em;
   margin-left:7em;
   margin-right:5em;
+}
+
+
+#error {
+  color: red;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 46em;
 }
