@@ -40,12 +40,12 @@ end
 
 
 get '/cambiar' do
-  @titulos = User.first(:username => "#{session[:user]}").titulo_rss
+  @tituloss = User.first(:username => "#{session[:user]}").titulo_rss
   @rsss = User.first(:username => "#{session[:user]}").rss
-  @titulos = @titulos.split("### ")
+  @tituloss = @tituloss.split("### ")
   @rsss = @rsss.split(" ")
   User.first(:username => session["user"]).update(:rss_used => @rsss[$next])
-  User.first(:username => session["user"]).update(:titulo_used => @titulos[$next])
+  User.first(:username => session["user"]).update(:titulo_used => @tituloss[$next])
   redirect to ('/')
 end
 

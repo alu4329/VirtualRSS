@@ -19,9 +19,12 @@
             - @rsss = User.first(:username => "#{session[:user]}").rss
             - @titulos = @titulos.split("### ")
             - @rsss = @rsss.split(" ")
-            - for $next in 0..@titulos.length-1
+            - $next = -1
+            - p $next
+            - p $next.class
+            - for i in 0..@titulos.length-1
               %li
-                %a{href:'/cambiar'} #{@titulos[$next]}
+                %a{href: '/cambiar', value:"#{i}", onclick:'cambiar(this)'} #{@titulos[i]}
             %hr
             %li
               %a{href: "/new_rss"} Añadir nueva RSS
