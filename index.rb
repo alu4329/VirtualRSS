@@ -18,8 +18,8 @@ class User
   property :username, 		String
   property :password, 		String
   property :foto,     		String
-  property :rss,      		String
-  property :titulo_rss,		String
+  property :rss,      		String, 	:required => false
+  property :titulo_rss,		String, 	:required => false
   property :num,		Integer,	:default => 5
   property :rss_used,		String,		:required => false  #Puede ser nulo
   property :titulo_used,	String,		:required => false  #Puede ser nulo

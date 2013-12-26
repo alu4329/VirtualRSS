@@ -27,12 +27,21 @@ get '/new_rss' do
 end
 
 
+get '/remove_rss' do
+  haml :remove_rss
+end
+
+
 post '/new_rss' do
   rss2 = " #{params[:user][:rss]}"
   rss_title2 = " #{params[:user][:rss_titulo]}"
   un_usuario = User.first(:username => session["user"])
   un_usuario.rss << rss2
-  un_usuario.titulo_rss << "####{rss_title2}"
+  if (User.first(:username => "#{session[:user]}").titulo_rss).length == 0
+    un_usuario.titulo_rss << rss_title2
+  else
+    un_usuario.titulo_rss << "####{rss_title2}"
+  end
   User.first(:username => session["user"]).update(:rss => un_usuario.rss)
   User.first(:username => session["user"]).update(:titulo_rss => un_usuario.titulo_rss)
   redirect to ('/')
@@ -54,6 +63,40 @@ get '/cambiar/:rss_used' do
     redirect to ('/')
   end
 end
+
+
+get '/delete/:rss_used' do
+  if session[:user]
+    @res_a = String.new()
+    @res_b = String.new()
+    @tituloss = User.first(:username => "#{session[:user]}").titulo_rss
+    @rsss = User.first(:username => "#{session[:user]}").rss
+    @tituloss = @tituloss.split("### ")
+    @rsss = @rsss.split(" ")
+    a = request.path_info
+    a = a.gsub(/\/eliminar\//,"")
+    a = a.to_i
+    
+    @tituloss.delete_at(a)
+    @rsss.delete_at(a) 
+    @res_a << @tituloss[0].to_s
+    @res_b << @rsss[0].to_s
+    
+    for i in 1..@tituloss.length-1 do
+      @res_a << "### " << @tituloss[i].to_s 
+      @res_b << " " << @rsss[i].to_s 
+    end
+    
+    User.first(:username => session["user"]).update(:rss_used => "")
+    User.first(:username => session["user"]).update(:titulo_used => "")
+    User.first(:username => session["user"]).update(:titulo_rss => @res_a)
+    User.first(:username => session["user"]).update(:rss => @res_b)
+    redirect to ('/')
+  else
+    redirect to ('/')
+  end
+end
+
 
 get '/numero/:num' do
   if session[:user]
