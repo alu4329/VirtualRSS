@@ -1,5 +1,9 @@
 ##Proyecto: VisualRSS
 
+##Creadores:
+Víctor Plaza Martín
+Eduardo Barrio Pareja
+
 ##Descripcion:
 Portal web que nace con la intención de afrecer de manera centralizada el acceso a las RSS seguidas por cada usuario.
 
