@@ -115,17 +115,17 @@ form.form-horizontal{
 }
 
 .breadcrumb.two {
-  background-color: #B0E0E6;
+  background-color: #B4EEB4;
+  text-align: center;
 }
 
 h1.titulo {
   margin-top: 0em;
   margin-bottom: 0em;
+  font-weight: bold;
 }
 
-.breadcrumb.two.li.h1 {
-  color: red;
-}
+
 
 a {
   text-shadow:none;
