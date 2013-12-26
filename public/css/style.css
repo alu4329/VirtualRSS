@@ -102,5 +102,32 @@ form.form-horizontal{
   font-size: 1.5em;
   font-weight: bold;
   text-align: left;
-  margin-left: 46em;
+  margin-left: 32.5em;
+}
+
+#carousel-example-generic{
+  background-color:red;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+}
+
+#carousel-example-generic.carousel.slide{
+  text-align:center;
+  min-width:11.2em;
+  min-height:33em;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+}
+
+a.left.carousel-control{
+  margin-top: 10em;
+  background: none;
+  border:none;
+}
+
+a.right.carousel-control{
+  border:none;
+  text-align: center;
+  margin-top: 10em;
+  background: none;
 }

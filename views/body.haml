@@ -11,3 +11,22 @@
         %hr
         %a{href:"#{@output[:link][i]}"} #{@output[:title][i]}
       %hr
+    - else
+      .center
+        #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+          / Wrapper for slides
+          .carousel-inner
+            .center
+              .item.active
+                %h1 ¿Qué somos?
+              .item
+                %h1 About Us
+              .item
+                %h1 Contacto
+              .item
+                %h1 Instrucciones de uso
+          / Controls
+          %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic"}
+            %span.glyphicon.glyphicon-chevron-left
+          %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic"}
+            %span.glyphicon.glyphicon-chevron-right

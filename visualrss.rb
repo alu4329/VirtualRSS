@@ -26,6 +26,10 @@ get '/new_rss' do
   haml :new_rss
 end
 
+get '/contacto' do
+  haml :contacto
+end
+
 
 post '/new_rss' do
   rss2 = " #{params[:user][:rss]}"
