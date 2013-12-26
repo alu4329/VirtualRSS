@@ -55,6 +55,17 @@ get '/cambiar/:rss_used' do
   end
 end
 
+get '/numero/:num' do
+  if session[:user]
+    a = request.path_info
+    a = a.gsub(/\/numero\//,"")
+    User.first(:username => session["user"]).update(:num => a.to_i)
+    redirect to ('/')
+  else
+    redirect to ('/')
+  end
+end
+
 
 get '/index' do
   haml :index

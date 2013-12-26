@@ -20,8 +20,9 @@ class User
   property :foto,     		String
   property :rss,      		String
   property :titulo_rss,		String
-  property :rss_used,		String, :required => false  #Puede ser nulo
-  property :titulo_used,	String, :required => false  #Puede ser nulo
+  property :num,		Integer,	:default => 5
+  property :rss_used,		String,		:required => false  #Puede ser nulo
+  property :titulo_used,	String,		:required => false  #Puede ser nulo
   
 
 #  has n, :rsss
