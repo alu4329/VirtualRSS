@@ -21,7 +21,8 @@
               - for i in 0..@titulos.length-1
                 %option{value: "cambiar/#{i}"} #{@titulos[i]}
             %optgroup{label: "Gestionar RSS"}
-              %option{value:"/new_rss"} Añadir nueva RSS     
+              %option{value:"/new_rss"} Añadir nueva RSS
+              %option{value:"/remove_rss"} Eliminar RSS      
       .btn-group.pull-right
         %button#dropdownMenu1.btn.btn-success.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
           = session[:user]

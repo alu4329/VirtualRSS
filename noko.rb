@@ -9,7 +9,6 @@ def show_rss (doc, numero)
   @resultado = {:title =>[], :link =>[]}
   for i in 2..(numero+1)
     if (@doc.search('description').children[i].class != NilClass)
-      puts @doc.search('description').children[i].class
       @doc.search('title').children[i]
       if (@doc.search('description').children[i].text.length) > 10
         @resultado[:title].push(truncate(@doc.search('description').children[i].text))
