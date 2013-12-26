@@ -14,9 +14,11 @@
         %option{value: "numero/30"} 30 RSS
       %br
       - @output = show_rss(User.first(:username => "#{session[:user]}").rss_used, User.first(:username => "#{session[:user]}").num)
-      %h1 #{User.first(:username => "#{session[:user]}").titulo_used}
-      - puts @output.length
-      - for i in 0..@output[:title].length
-        %hr
-        %a{href:"#{@output[:link][i]}"} #{@output[:title][i]}
-      %hr
+      %ol.breadcrumb.two
+        %li
+          %h1.titulo #{User.first(:username => "#{session[:user]}").titulo_used}
+      - for i in 0..@output[:title].length-1
+        %ol.breadcrumb
+          %li
+            %a{href: "#{@output[:link][i]}"} #{@output[:title][i]}
+

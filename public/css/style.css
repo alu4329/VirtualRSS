@@ -104,3 +104,29 @@ form.form-horizontal{
   text-align: left;
   margin-left: 30.5em;
 }
+
+
+.breadcrumb {
+  background-color: #E5E5E5;
+  background-image: none;
+  margin-bottom: 0.2em;
+  font-size: 1.3em;
+  border:none;
+}
+
+.breadcrumb.two {
+  background-color: #B0E0E6;
+}
+
+h1.titulo {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.breadcrumb.two.li.h1 {
+  color: red;
+}
+
+a {
+  text-shadow:none;
+}
