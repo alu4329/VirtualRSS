@@ -12,13 +12,17 @@
         %a{href:"#{@output[:link][i]}"} #{@output[:title][i]}
       %hr
     - else
-      .center
+      .carousel_rss
         #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
           / Wrapper for slides
           .carousel-inner
             .center
               .item.active
-                %h1 ¿Qué somos?
+                .quesomos
+                  %h1 ¿Qué somos?
+                  %h2 Visual RSS
+                  .left
+                    %h3 Visual RSS es una página donde poder tener todas tus RSS almacenadas de manera que podrás consultar toda la información de tus principales círculos de manera rápida, sencilla y ordenada, todo en una misma página.
               .item
                 %h1 About Us
               .item
