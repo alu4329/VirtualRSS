@@ -1,3 +1,9 @@
+img{
+  margin-top: 0.4em;
+  height:3em;
+  width: 10em;
+}
+
 .body{
   background-color:#F5F5F5;
   min-height:40em;
@@ -16,7 +22,7 @@
 .cabecera {
   margin-bottom: 5em;
 }
-
+  
 .desplegable {
   margin-top: 1.25em;
   margin-left: 63em;
@@ -35,11 +41,6 @@ fieldset{
   text-align: center;
 }
 
-img{
-  margin-top: 0.4em;
-  height:3em;
-  width: 10em;
-}
 
 .registro{
   font-weight: bold;
@@ -147,7 +148,6 @@ a.right.carousel-control{
 }
 
 .carousel_rss{
-  background-color: #FFFAFA;
   text-align: center;
   -webkit-border-radius: 5px 10px;  /* Safari  */
   -moz-border-radius: 5px 10px;     /* Firefox */
@@ -165,12 +165,85 @@ span.glyphicon.glyphicon-chevron-right{
   margin-right: -0.5em;
 }
 
-img.quesomos{
+img.foto{
   margin-top: 0.4em;
-  height:13em;
+  height: 13em;
   width: 13em;
+  text-align:center;
+}
+  
+.item.active{
+  background: #C3C3E5;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+  min-width:11.2em;
+  min-height:33em;
 }
 
-.aboutus{
-  
+img.nosotros{
+  height:4em;
+  width: 5em;
 }
+
+div#edu{
+  margin-top: 2em;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-left:6em;
+}
+
+div#texto1{
+  margin-top:-1em;
+  margin-left:10em;
+  text-align:left;
+}
+
+p#parrafo{
+  font-size:1em;
+}
+
+p#parrafo2{
+  font-size:0.7em;
+}
+
+p#parrafo3{
+  font-size:0.6em;
+}
+
+div#victor{
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-left:6em;
+  margin-top:4em;
+}
+
+.item.asd{
+  margin-top:1.35em;
+  background:#E9E9E1;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+  min-width:11.2em;
+  min-height:33em;
+}
+
+.item.contacto{
+  background:#D1E1C6;
+  margin-top:1.35em;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+  min-width:11.2em;
+  min-height:33em;
+}
+
+.item.contacto{
+}
+
+div#iframe{
+  margin-left:15em;
+}
+
+div#info{
+  font-size:2em;
+  font-weight:bold;
+}
+
