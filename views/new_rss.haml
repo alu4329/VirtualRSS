@@ -2,21 +2,24 @@
 = haml :cabecera
 
 - if session[:user]
-  %form.form-horizontal{:name => "registro", :method => "POST", :action => "/new_rss"}
-    %fieldset
-      %legend Registro
-      .control-group
-        %label.control-label{for: "textinput"}
-        .controls
-          %input#passwordinput.input-xlarge{placeholder: "Link a la RSS",:type => "text", :name => "user[rss]"}
-      .control-group
-        %label.control-label{for: "textinput"}
-        .controls
-          %input#passwordinput.input-xlarge{placeholder: "Titulo de la RSS",:type => "text", :name => "user[rss_titulo]"}
-      .control-group
-        %label.control-label{for: "singlebutton"}
-        .controls
-          %button#singlebutton.btn.btn-primary{name: "singlebutton"} Enviar
+  .body
+    %br
+    .center
+      %form.form-horizontal{:onsubmit => "return test2()", :name => "registro", :method => "POST", :action => "/new_rss"}
+        %h2 Añadir RSS
+        %div{:id=>"error"}
+        .control-group
+          %label.control-label{for: "textinput"}
+          .controls
+            %input#link.input-xlarge{placeholder: "Link a la RSS",:type => "text", :name => "user[rss]"}
+        .control-group
+          %label.control-label{for: "textinput"}
+          .controls
+            %input#title.input-xlarge{placeholder: "Titulo de la RSS",:type => "text", :name => "user[rss_titulo]"}
+        .control-group
+          %label.control-label{for: "singlebutton"}
+          .controls
+            %button#singlebutton.btn.btn-primary{name: "singlebutton"} Enviar
 - else
   - redirect to('/sign_up')
 

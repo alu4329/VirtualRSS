@@ -1,11 +1,11 @@
 function test() {
   
-  var valora = document.getElementById("textinput_nombre").value;
-  var valorb = document.getElementById("passwordinput_password").value;
-  var valorc = document.getElementById("passwordinput_rss").value;
-  var valord = document.getElementById("passwordinput_titulo").value;
-  var valore = document.getElementById("passwordinput_foto").value;
-  var valorf = document.getElementById("checkboxes-0");
+  var valora = document.getElementById("nombre").value;
+  var valorb = document.getElementById("password").value;
+  var valorc = document.getElementById("rss").value;
+  var valord = document.getElementById("titulo").value;
+  var valore = document.getElementById("foto").value;
+  var valorf = document.getElementById("condicion");
   var regexp = new RegExp(/(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/);
   var fail = 1;
   
@@ -73,6 +73,47 @@ function test() {
   } else {
     return false;
   }
+}
+
+
+
+function test2() {
+  var valora = document.getElementById("link").value;
+  var valorb = document.getElementById("title").value;
+  var regexp = new RegExp(/(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/);
+  var fail = 1;
+  
+  
+  for (var a=0; a < 2; a++) {
+    if (document.getElementById(a)) {
+      removeElement(a);
+    }
+  }
+  
+  if (valora.search(/.xml/) < 0 || valora.search(/http/) < 0) {
+    var parrafo2 = document.createElement("p");
+    var contenido = document.createTextNode("Debe introducir una link a una RSS válida");
+    parrafo2.appendChild(contenido);
+    document.getElementById("error").appendChild(parrafo2);
+    parrafo2.setAttribute('id',0);
+    fail = 0;
+  }
+  
+  if (valorb == null || valorb.length == 0  || /^\s+$/.test(valorb)) {
+    var parrafo3 = document.createElement("p");
+    var contenido = document.createTextNode("Introduzca un título asociado a la RSS");
+    parrafo3.appendChild(contenido);
+    document.getElementById("error").appendChild(parrafo3);
+    parrafo3.setAttribute('id',1);
+    fail = 0;
+  }
+  
+  if (fail) {
+    return true;
+  } else {
+    return false;
+  }
+  
 }
 
 
