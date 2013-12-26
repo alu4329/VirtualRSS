@@ -19,18 +19,54 @@
             .center
               .item.active
                 .quesomos
-                  %h1 ¿Qué somos?
-                  %h2 Visual RSS
+                  %h2
+                    %img.quesomos2{alt: "logo", src: "images/Logo.png"}
                   %h3 Visual RSS es una página donde poder tener todas tus RSS almacenadas de manera que podrás consultar toda la información de tus principales círculos de manera rápida, sencilla y ordenada, todo en una misma página.
                   %br
-                  %img.quesomos{alt: "Chicos RSS", src: "images/chicos_rss.png"}
-              .item
-                .aboutus
-                  %h1 About Us
-              .item
+                  %img.foto{alt: "Chicos RSS", src: "images/chicos_rss.png"}
+              .item.asd
+                %br
+                %h1 About Us
+                %h2
+                  Esta aplicación web ha sido creada por:
+                  %br
+                %div#edu
+                  %img.nosotros{alt: "logo", src: "images/edu.png", align: "LEFT"}
+                  %div#texto1
+                    %br
+                    %p#parrafo Eduardo Barrio Pareja
+                    %p#parrafo2 Estudiante de 4º de Grado en Ingeniería en Informática.
+                    %p#parrafo3 Especialidad en Tecnologías de la Información.
+                %div#victor
+                  %img.nosotros{alt: "logo", src: "images/victor.png", align: "LEFT"}
+                    %div#texto1
+                      %br
+                      %p#parrafo Víctor Plaza Martín
+                      %p#parrafo2 Estudiante de 4º de Grado en Ingeniería en Informática
+                      %p#parrafo3 Especialidad en Tecnologías de la Información.
+              .item.contacto
+                %br
                 %h1 Contacto
-              .item
-                %h1 Instrucciones de uso
+                
+                %iframe{frameborder: "0", height: "250" , width: "250", marginheight: "0", marginwidth: "0", scrolling: "no", src: "https://maps.google.es/maps?f=q&source=s_q&hl=es&geocode=&q=nuestra+se%C3%B1ora+africa+tenerife&aq=&sll=40.2085,-3.713&sspn=17.994997,28.696289&ie=UTF8&hq=nuestra+se%C3%B1ora+africa&hnear=Tenerife&t=m&cid=10460320349920661701&ll=28.46356,-16.252019&spn=0.005659,0.006437&z=16&iwloc=A&output=embed"}
+                %br/
+                %small
+                  %a{href: "https://maps.google.es/maps?f=q&source=embed&hl=es&geocode=&q=nuestra+se%C3%B1ora+africa+tenerife&aq=&sll=40.2085,-3.713&sspn=17.994997,28.696289&ie=UTF8&hq=nuestra+se%C3%B1ora+africa&hnear=Tenerife&t=m&cid=10460320349920661701&ll=28.46356,-16.252019&spn=0.005659,0.006437&z=16&iwloc=A", style: "color:#0000FF;text-align:left"} Ver mapa más grande
+                %br/
+                %br/
+                %br/
+                %ul
+                  .info
+                    %p C/ Budapest, 2
+                    %p 38201 San Cristobal de la Laguna
+                    %p Teléfono: 922662385
+                
+                
+                
+                
+                
+                
+                
           / Controls
           %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic"}
             %span.glyphicon.glyphicon-chevron-left

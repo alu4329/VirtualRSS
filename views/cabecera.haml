@@ -34,7 +34,7 @@
               %a{href: "/logout", role: "menuitem", tabindex: "-1"} Cerrar sesion         
     - else
       .registro
-        %a.navbar-brand{href: "/sign_up"} Registro &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        %a.navbar-brand{href: "/sign_up"} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Registro &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         %form.navbar-form.navbar-right{:action=>"/",:method=>"POST", role: "form"}
           .form-group
             %input.form-control{placeholder: "Usuario", type: "text", :name=>"user[username]"}/
