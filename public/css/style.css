@@ -106,6 +106,7 @@ form.form-horizontal{
 }
 
 #carousel-example-generic{
+  margin-top: -2.5em;
   background-color:red;
   -webkit-border-radius: 5px 10px;  /* Safari  */
   -moz-border-radius: 5px 10px;     /* Firefox */
