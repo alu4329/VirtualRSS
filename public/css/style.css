@@ -43,6 +43,7 @@ img{
 
 .registro{
   font-weight: bold;
+  text-align: right;
 }
 
 .rss_asociada{
@@ -135,4 +136,10 @@ a {
 .body_show {
   margin-left: 15em;
   margin-right: 15em;
+}
+
+
+%button.btn.btn-warning {
+  text-align: right;
+}
 }
