@@ -107,7 +107,6 @@ form.form-horizontal{
 
 #carousel-example-generic{
   margin-top: -2.5em;
-  background-color:red;
   -webkit-border-radius: 5px 10px;  /* Safari  */
   -moz-border-radius: 5px 10px;     /* Firefox */
 }
@@ -121,14 +120,57 @@ form.form-horizontal{
 }
 
 a.left.carousel-control{
+  margin-left: 1em;
   margin-top: 10em;
-  background: none;
-  border:none;
+  background: blue;
+  color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: 1em;
+  margin-top: 10em;
+  background: #E8E8E8;
 }
 
 a.right.carousel-control{
-  border:none;
+  margin-left: 1em;
+  margin-top: 10em;
+  background: blue;
+  margin-right: 1em;
+  color: black;
   text-align: center;
   margin-top: 10em;
-  background: none;
+  background: #E8E8E8;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel_rss{
+  background-color: #FFFAFA;
+  text-align: center;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+  min-width:11.2em;
+  min-height:33em;
+}
+
+span.glyphicon.glyphicon-chevron-left{
+  margin-top:-0.5em;
+  margin-left: -0.55em;
+}
+
+span.glyphicon.glyphicon-chevron-right{
+  margin-top: -0.5em;
+  margin-right: -0.5em;
+}
+
+img.quesomos{
+  margin-top: 0.4em;
+  height:13em;
+  width: 13em;
+}
+
+.aboutus{
+  
 }
