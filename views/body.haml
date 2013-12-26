@@ -4,7 +4,7 @@
     %br
     %br
     - if session[:user] && ((User.first(:username => "#{session[:user]}").titulo_used.class) == String)
-      %select{name: "Mostrar:", onchange: "location = this.options[this.selectedIndex].value;"}
+      %select{name:"Mostrar:", onchange:"location = this.options[this.selectedIndex].value;"}
         %option{value: "numero/5"} Número de RSS:
         %option{value: "numero/5"} 5 RSS
         %option{value: "numero/10"} 10 RSS
@@ -12,6 +12,7 @@
         %option{value: "numero/20"} 20 RSS
         %option{value: "numero/25"} 25 RSS
         %option{value: "numero/30"} 30 RSS
+      %br
       %br
       - @output = show_rss(User.first(:username => "#{session[:user]}").rss_used, User.first(:username => "#{session[:user]}").num)
       %ol.breadcrumb.two

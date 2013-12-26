@@ -130,3 +130,9 @@ h1.titulo {
 a {
   text-shadow:none;
 }
+
+
+.body_show {
+  margin-left: 15em;
+  margin-right: 15em;
+}
