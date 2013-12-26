@@ -66,7 +66,9 @@ end
 
 
 get '/delete/:rss_used' do
-  if session[:user] 
+  if session[:user]
+    @res_a = String.new()
+    @res_b = String.new()
     @tituloss = User.first(:username => "#{session[:user]}").titulo_rss
     @rsss = User.first(:username => "#{session[:user]}").rss
     @tituloss = @tituloss.split("### ")
@@ -75,13 +77,8 @@ get '/delete/:rss_used' do
     a = a.gsub(/\/eliminar\//,"")
     a = a.to_i
     
-    p @tituloss
-    p @rsss
     @tituloss.delete_at(a)
-    @rsss.delete_at(a)
-    
-    @res_a = String.new();
-    @res_b = String.new();
+    @rsss.delete_at(a) 
     @res_a << @tituloss[0].to_s
     @res_b << @rsss[0].to_s
     
