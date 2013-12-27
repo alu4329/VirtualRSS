@@ -1,4 +1,4 @@
-#require './lib/visualrss.rb'
+require './visualrss.rb'
 
 require 'dm-core'
 require 'dm-migrations'
