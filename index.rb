@@ -1,6 +1,6 @@
 #require './lib/visualrss.rb'
+
 require 'dm-core'
-require 'pg'
 require 'dm-migrations'
 require 'sinatra'
 require 'sass'
