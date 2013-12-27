@@ -3,7 +3,15 @@ require './index.rb'
 settings.port = ENV['PORT'] || 4567
 use Rack::Session::Pool, :expire_after => 2592000
 set :session_secret, 'super secret'
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
+
+configure :development do
+  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
+end
+
+configure :production do
+  DataMapper.setup(:default, ENV['DATABASE_URL'])
+end
+
 DataMapper.auto_upgrade!
 
 
