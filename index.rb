@@ -1,16 +1,5 @@
-require './visualrss.rb'
-
 require 'dm-core'
 require 'dm-migrations'
-require 'sinatra'
-require 'sass'
-require 'pp'
-require 'open-uri'
-require 'nokogiri'
-require 'ruby-bitly'
-require 'haml'
-require './noko.rb'
-require 'sinatra/flash'
 
 class User
   include DataMapper::Resource

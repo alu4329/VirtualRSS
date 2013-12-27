@@ -1,4 +1,13 @@
 require './index.rb'
+require 'sinatra'
+require 'sass'
+require 'pp'
+require 'open-uri'
+require 'nokogiri'
+require 'ruby-bitly'
+require 'haml'
+require './noko.rb'
+require 'sinatra/flash'
 
 settings.port = ENV['PORT'] || 4567
 use Rack::Session::Pool, :expire_after => 2592000
