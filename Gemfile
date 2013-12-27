@@ -8,7 +8,7 @@ gem "dm-core"
 gem "heroku"
 gem "dm-migrations"
 gem "dm-postgres-adapter", :group => :production
-#gem "dm-sqlite-adapter"
+gem "dm-sqlite-adapter"
 gem 'nokogiri'
 gem 'sinatra'
 gem 'bitly'
