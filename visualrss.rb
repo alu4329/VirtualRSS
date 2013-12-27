@@ -58,7 +58,9 @@ get '/privacidad' do
 end
 
 post '/new_rss' do
-  rss2 = " #{params[:user][:rss]}"
+  rss2 = " #{params[:user][:rss]}" 
+  #Cambiar por esta línea cuando se quiera hacer uso de Bitly short
+  #rss2 = "#{params[:user][:rss]}" 
   #rss2 = Bitly.shorten(rss2, "o_1qfb1am5b6", "R_770c5cbd981cadac42359a65fed206df").url
   #rss2 = rss2.gsub(/http:\/\//,"")
   #rss2 = " " << rss2
