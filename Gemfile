@@ -6,6 +6,7 @@ gem "sass", :require => 'sass'
 gem 'thin'
 gem "dm-core"
 gem "heroku"
+gem "pg", :group => :production
 gem "dm-migrations"
 gem "dm-postgres-adapter", :group => :production
 gem "dm-sqlite-adapter", :group => :development

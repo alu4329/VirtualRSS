@@ -64,6 +64,7 @@ GEM
       jwt (~> 0.1.4)
       multi_json (~> 1.0)
       rack (~> 1.2)
+    pg (0.17.1)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -98,6 +99,7 @@ DEPENDENCIES
   haml
   heroku
   nokogiri
+  pg
   ruby-bitly
   sass
   sinatra
