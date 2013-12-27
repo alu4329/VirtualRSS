@@ -26,11 +26,19 @@ get '/new_rss' do
   haml :new_rss
 end
 
+get '/contacto' do
+  haml :contacto
+end
+
 
 get '/remove_rss' do
   haml :remove_rss
 end
 
+
+get '/privacidad' do
+  haml :privacidad
+end
 
 post '/new_rss' do
   rss2 = " #{params[:user][:rss]}"

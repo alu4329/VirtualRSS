@@ -3,17 +3,20 @@
 
 - if session[:user]
   .body
-    %br
-    .center
+    .body_output2
+      %br
+      %br
       %form.form-horizontal{:onsubmit => "return test2()", :name => "registro", :method => "POST", :action => "/new_rss"}
-        %h2 Eliminar RSS
         - @titulos = User.first(:username => "#{session[:user]}").titulo_rss
         - @titulos = @titulos.split("### ")
+        %ol.breadcrumb.two
+          %li
+            %h1.titulo Eliminar RSS
         - for i in 0..@titulos.length-1
           %ol.breadcrumb
             %li
-              %p #{@titulos[i]} 
-              %a{href: "/delete/#{i}"} Eliminar
+              #{@titulos[i]} &nbsp&nbsp&nbsp&nbsp
+              %a#separar{href: "/delete/#{i}"} Eliminar
 - else
   - redirect to('/sign_up')
 

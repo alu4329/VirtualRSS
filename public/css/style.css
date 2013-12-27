@@ -1,3 +1,9 @@
+img{
+  margin-top: 0.4em;
+  height:3em;
+  width: 10em;
+}
+
 .body{
   background-color:#F5F5F5;
   min-height:40em;
@@ -16,7 +22,7 @@
 .cabecera {
   margin-bottom: 5em;
 }
-
+  
 .desplegable {
   margin-top: 1.25em;
   margin-left: 63em;
@@ -35,11 +41,6 @@ fieldset{
   text-align: center;
 }
 
-img{
-  margin-top: 0.4em;
-  height:3em;
-  width: 10em;
-}
 
 .registro{
   font-weight: bold;
@@ -89,12 +90,20 @@ form.form-horizontal{
   margin-right:5em;
 }
 
-.body_show{
+.body_output{
   background-color:#F5F5F5;
   min-height:40em;
   margin-top:3.5em;
-  margin-left:7em;
-  margin-right:5em;
+  margin-left: 15em;
+  margin-right: 15em;
+}
+
+.body_output2{
+  background-color:#F5F5F5;
+  min-height:40em;
+  margin-top:3.5em;
+  margin-left: 27em;
+  margin-right: 15em;
 }
 
 
@@ -103,7 +112,7 @@ form.form-horizontal{
   font-size: 1.5em;
   font-weight: bold;
   text-align: left;
-  margin-left: 30.5em;
+  margin-left: 33em;
 }
 
 
@@ -114,6 +123,7 @@ form.form-horizontal{
   font-size: 1.3em;
   border:none;
 }
+
 
 .breadcrumb.two {
   background-color: #B4EEB4;
@@ -126,20 +136,171 @@ h1.titulo {
   font-weight: bold;
 }
 
+h1.titulo2{
+  font-family: 'Rock Salt', cursive;
+  font-weight: bold;
+}
+
+h1.titulo3{
+    font-family: 'Rock Salt', cursive;
+    font-weight: bold;
+    margin-left: 4em;
+    margin-bottom:1em;
+}
 
 
 a {
   text-shadow:none;
 }
 
-
-.body_show {
-  margin-left: 15em;
-  margin-right: 15em;
-}
-
-
 %button.btn.btn-warning {
   text-align: right;
 }
+
+#carousel-example-generic{
+  margin-top: -2.5em;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+}
+
+#carousel-example-generic.carousel.slide{
+  text-align:center;
+  min-width:11.2em;
+  min-height:33em;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+}
+
+a.left.carousel-control{
+  margin-left: 1em;
+  margin-top: 10em;
+  background: blue;
+  color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: 1em;
+  margin-top: 10em;
+  background: #E8E8E8;
+}
+
+a.right.carousel-control{
+  margin-left: 1em;
+  margin-top: 10em;
+  background: blue;
+  margin-right: 1em;
+  color: black;
+  text-align: center;
+  margin-top: 10em;
+  background: #E8E8E8;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel_rss{
+  text-align: center;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+  min-width:11.2em;
+  min-height:33em;
+}
+
+span.glyphicon.glyphicon-chevron-left{
+  margin-top:-0.5em;
+  margin-left: -0.55em;
+}
+
+span.glyphicon.glyphicon-chevron-right{
+  margin-top: -0.5em;
+  margin-right: -0.5em;
+}
+
+img.foto{
+  margin-top: 0.4em;
+  height: 13em;
+  width: 13em;
+  text-align:center;
+}
+  
+.item.active{
+  background: #C3C3E5;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+  min-width:11.2em;
+  min-height:33em;
+}
+
+img.nosotros{
+  height:4em;
+  width: 5em;
+}
+
+div#edu{
+  margin-top: 2em;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-left:6em;
+}
+
+div#texto1{
+  margin-top:-1em;
+  margin-left:7em;
+  text-align:left;
+}
+
+p#parrafo{
+  font-size:1em;
+}
+
+p#parrafo2{
+  font-size:0.7em;
+}
+
+p#parrafo3{
+  font-size:0.6em;
+}
+
+div#victor{
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-left:6em;
+  margin-top:4em;
+}
+
+.item.asd{
+  margin-top:1.35em;
+  background:#E9E9E1;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+  min-width:11.2em;
+  min-height:33em;
+}
+
+.item.contacto{
+  background:#D1E1C6;
+  margin-top:1.35em;
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+  min-width:11.2em;
+  min-height:33em;
+}
+
+div#iframe{
+  margin-left:15em;
+}
+
+div#info{
+  font-size:2em;
+  font-weight:bold;
+}
+
+div#politica{
+  text-align:center;
+  margin-left:7em;
+  margin-right:7em;
+}
+
+%a#separar{
+  margin-left:1.5em;
 }
