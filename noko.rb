@@ -5,6 +5,7 @@ require './words.rb'
   #@doc2 = Nokogiri::XML(open("http://ep00.epimg.net/rss/elpais/portada.xml"))
 
 def show_rss (doc, numero)
+  doc = "http://" << doc
   @doc = Nokogiri::XML(open(doc))
   @resultado = {:title =>[], :link =>[]}
   for i in 2..(numero+1)
