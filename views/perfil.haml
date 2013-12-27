@@ -2,9 +2,10 @@
 = haml :cabecera
 
 .perfil
-  %h1 HOLA soy cuerpo
   - if session[:user]
-      %br
+    %br
+    %img#construccion{alt: "construccion", src: "images/pagina_construccion.png"}
   - else
-    %h1 Debe estar registrado para poder acceder al perfil.
-    %a{href: "/index"} Volver
+    - redirect to ('/')
+    
+= haml :pie
