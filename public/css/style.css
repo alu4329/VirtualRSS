@@ -8,8 +8,8 @@ img{
   background-color:#F5F5F5;
   min-height:40em;
   margin-top:3.5em;
-  margin-left:5em;
-  margin-right:5em;
+  margin-left:4em;
+  margin-right:4em;
 }
 
 .footer{
@@ -67,8 +67,8 @@ hr{
 .navbar.navbar-inverse.navbar-fixed-top{
   background-color:#E0E0E0;
   border:0px;
-  margin-left:5em;
-  margin-right:5em;
+  margin-left:4em;
+  margin-right:4em;
 }
 
 form.form-horizontal{
@@ -106,13 +106,20 @@ form.form-horizontal{
   margin-right: 15em;
 }
 
+.body_output3{
+  background-color:#F5F5F5;
+  min-height:40em;
+  margin-top:3.5em;
+  margin-left: 10em;
+  margin-right: 10em;
+}
 
 #error {
   color: red;
   font-size: 1.5em;
   font-weight: bold;
   text-align: left;
-  margin-left: 33em;
+  margin-left: 29.9em;
 }
 
 

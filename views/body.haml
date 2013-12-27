@@ -1,9 +1,7 @@
 .body
-  .body_output
-    %br
-    %br
-    %br
-    - if session[:user] && ((User.first(:username => "#{session[:user]}").titulo_used.class) == String)
+  %br
+  - if session[:user] && ((User.first(:username => "#{session[:user]}").titulo_used.class) == String)
+    .body_output
       %select{name:"Mostrar:", onchange:"location = this.options[this.selectedIndex].value;"}
         %option{value: "numero/5"} Número de RSS:
         %option{value: "numero/5"} 5 RSS
@@ -24,7 +22,8 @@
             %li
               %a{href: "#{@output[:link][i]}"} #{@output[:title][i]}
 
-    - else
+  - else
+    .body_output3
       .carousel_rss
         #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
           / Wrapper for slides

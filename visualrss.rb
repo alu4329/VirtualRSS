@@ -58,10 +58,10 @@ get '/privacidad' do
 end
 
 post '/new_rss' do
-  rss2 = "#{params[:user][:rss]}"
-  rss2 = Bitly.shorten(rss2, "o_1qfb1am5b6", "R_770c5cbd981cadac42359a65fed206df").url
-  rss2 = rss2.gsub(/http:\/\//,"")
-  rss2 = " " << rss2
+  rss2 = " #{params[:user][:rss]}"
+  #rss2 = Bitly.shorten(rss2, "o_1qfb1am5b6", "R_770c5cbd981cadac42359a65fed206df").url
+  #rss2 = rss2.gsub(/http:\/\//,"")
+  #rss2 = " " << rss2
   rss_title2 = " #{params[:user][:rss_titulo]}"
   un_usuario = User.first(:username => session["user"])
   un_usuario.rss << rss2
@@ -95,18 +95,21 @@ end
 
 get '/delete/:rss_used' do
   if session[:user]
-    @res_a = String.new()
-    @res_b = String.new()
+    
     @tituloss = User.first(:username => "#{session[:user]}").titulo_rss
     @rsss = User.first(:username => "#{session[:user]}").rss
     @tituloss = @tituloss.split("### ")
     @rsss = @rsss.split(" ")
     a = request.path_info
-    a = a.gsub(/\/eliminar\//,"")
+    a = a.gsub(/\/delete\//,"")
     a = a.to_i
+    p a
     
     @tituloss.delete_at(a)
     @rsss.delete_at(a) 
+    
+    @res_a = String.new()
+    @res_b = String.new()
     @res_a << @tituloss[0].to_s
     @res_b << @rsss[0].to_s
     
@@ -174,11 +177,11 @@ post '/sign_up' do
   elsif User.first(:username => "#{params[:user][:username]}")
     redirect to ('/sign_up')
   else
-    short_rss = params[:user][:rss]
-    short_rss = Bitly.shorten(short_rss, "o_1qfb1am5b6", "R_770c5cbd981cadac42359a65fed206df").url
-    short_rss = short_rss.gsub(/http:\/\//,"")
-    params[:user][:rss] = short_rss
-    p params[:user][:rss]
+    #short_rss = params[:user][:rss]
+    #short_rss = Bitly.shorten(short_rss, "o_1qfb1am5b6", "R_770c5cbd981cadac42359a65fed206df").url
+    #short_rss = short_rss.gsub(/http:\/\//,"")
+    #params[:user][:rss] = short_rss
+    #p params[:user][:rss]
     user = User.create(params[:user])
     session["user"] = "#{params[:user][:username]}"
     redirect to("/")
